@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Pemrograman Web</title>
+    <style>
+		div {
+			height: 100px;
+			border: 50px #f1f52b;
+			background-color: rgb(219, 78, 43);
+		}
+		.kotak {width:auto; height:max-content;}
+	</style>
+</head>
+
+
+<body>
+    <div class="kotak">
+        <header> 
+        <center><h1 style="color:white; background-color: red">Menu Utama Ujian 1 P.Web</h1></center>
+        </header>
+        
+
+        <ul>
+            <li style="list-style: none;"><a href="index.html">Menu Utama</a></li>
+            <li style="list-style: none;"><a href="penjualan.html">Penjualan</a></li>
+            <li style="list-style: none;"><a href="tentang.html">Tentang Saya</a></li>
+        </ul>
+
+        <center>
+            <label for="nama">Nama Barang:</label>
+            <input type="text" name="nama" id="nama"><br><br>
+            <label for="harga">Harga Barang:</label>
+            <input type="text" id="harga" name="harga"><br><br>
+            <label for="jumlah">Jumlah Barang:</label>
+            <input type="text" id="jumlah" name="jumlah"><br><br>
+            <button onclick="hitungTotal()">Hitung</button><br><br>
+            <hr>
+            <div id="informasi"></div>
+            <div id="total" style="font-size: 20px;"></div>
+        </center>
+
+
+
+
+
+        <script>
+            function hitungTotal() {
+                // Ambil nilai input dari elemen HTML
+                var nama = document.getElementById("nama").value;
+                var harga = document.getElementById("harga").value;
+                var jumlah = document.getElementById("jumlah").value;
+                
+                // Hitung total harga
+                var total = harga * jumlah;
+                
+                // Tampilkan total harga ke elemen HTML
+                document.getElementById("informasi").innerHTML = "<b>Nama Barang : " + nama + "<br><br>Harga Barang : " + harga + "<br><br>Jumlah Beli : " + jumlah + "<br><br>";
+                document.getElementById("total").innerHTML = "<b>Total Bayar : " + total;
+
+            }
+        </script>
+
+        <footer> 
+            <center> <h1 style="color:white; background-color: red">20101106016 - Adjie Tresnohadi Dermawn - Kelas A  </h1> </center>
+        </footer> 
+    </div>  
+</body>
+</html>
